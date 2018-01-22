@@ -1,1 +1,1 @@
-# wicebot
+# WiceBot
