@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
  
 client.on('ready', () => {
+  client.setStatus('online', '.message to chat with me!');
   console.log('Process started.');
 });
  
