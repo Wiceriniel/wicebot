@@ -17,7 +17,7 @@ client.on('message', message => {
   switch(message.content) {
 
     case "$help":
-    message.reply("This is a chatbot. Type **.message** to start a conversation.")
+    message.reply("This a chatbot. Type .message to start a conversation.")
       break;
 
     case 'ping':
@@ -68,6 +68,18 @@ if((message.cleanContent.startsWith("$") || message.channel.type == 'dm') && mes
     message.member.setVoiceChannel(channel);
     //message.delete();
         break;
+
+    case "setvc":
+    const user = message.mentions.members.first();
+    message.guild.member(user).setVoiceChannel(message.guild.channels.find("id", cmd[2]));
+    message.delete();
+      break;
+      
+    case "c":
+    const channel2 = message.guild.channels.find('id', process.env.VOICE_GYK);
+    message.member.setVoiceChannel(channel2);
+    message.delete();
+      break;
 
     default:
     if(message.content === "$help") {} else {
