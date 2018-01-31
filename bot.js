@@ -17,7 +17,7 @@ client.on('message', message => {
   switch(message.content) {
 
     case "$help":
-    message.reply("This a chatbot. Type .message to start a conversation.")
+    message.reply("This is a chatbot. Type **.message** to start a conversation.")
       break;
 
     case 'ping':
