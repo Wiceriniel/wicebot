@@ -27,6 +27,14 @@ client.on('message', message => {
     case 'sa':
     message.reply('as')
         break;
+    
+   case 'Sa':
+    message.reply('as')
+        break;
+    
+    case 'SA':
+    message.reply('as')
+        break;
 
     case 'hi':
     message.reply('hey')
