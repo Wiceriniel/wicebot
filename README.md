@@ -1,1 +1,3 @@
 # WiceBot
+
+Discord bot project
