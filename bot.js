@@ -43,7 +43,7 @@ client.on('message', async message => {
       zaman = editZamani;
     }
 
-    message.channel.send("Kanal: <#" + message.channel.id + "> | Alıntılayan: <@" + message.author.id + ">");
+    //message.channel.send("Kanal: <#" + message.channel.id + "> | Alıntılayan: <@" + message.author.id + ">");
     message.channel.send({
       "embed": {
 
@@ -51,6 +51,11 @@ client.on('message', async message => {
 
       "color": 3381759,
       "timestamp": zaman,
+
+      "footer": {
+        //"icon_url": message.author.avatarURL,
+        "text": "Alıntılayan: " + message.author.username + "#" + message.author.discriminator
+      },
 
       /*"image": {
         "url": "https://cdn.discordapp.com/attachments/425945005635665922/459843736046796810/ba74954dde74ff40a32ff58069e78c36.png"
