@@ -3,3 +3,5 @@ module.exports = {
         return process.env.BOT_TOKEN;
     }
   };
+
+//test
