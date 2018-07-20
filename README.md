@@ -1,3 +1,3 @@
 # WiceBot
 
-Discord bot project
+A Discord bot works on Node.JS.
