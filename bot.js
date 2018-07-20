@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require('./config.json');
+
+var token = require('./token');
 
 var prefix = "+";
- 
-client.login(config.token);
+client.login(token.getToken());
 
 client.on('ready', () => {
   console.log('Wicebot is online!');
