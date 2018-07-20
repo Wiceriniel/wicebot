@@ -110,6 +110,11 @@ client.on('message', async message => {
   if (command == "pm") {
     message.mentions.members.first().send(message.guild.name + " sunucusundan gelen mesaj:\n" + message.cleanContent.slice(prefix.length + command.length + message.mentions.members.first().displayName.length + 3));
     message.delete();
+  } else
+
+  if (command == "send") {
+    message.channel.send(message.content.slice(prefix.length + command.length + 1));
+    message.delete();
   }
 
 });
