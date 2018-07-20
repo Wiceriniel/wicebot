@@ -83,7 +83,7 @@ client.on('message', async message => {
   .catch(console.error);
   }
 
-  if (command === "delete") {
+  if (command === "sil") {
     message.channel.fetchMessage(args[0])
   .then(msg => msg.delete())
   .catch(console.error);
@@ -96,6 +96,19 @@ client.on('message', async message => {
     } else {
       message.channel.send("Geçersiz komut.");
     }
+  } else
+
+  if (message.content == "webhook oluştur") {
+
+    message.channel.createWebhook("WiceBot Webhook", "https://cdn.discordapp.com/avatars/396808835920297984/63bf8d98380f36746e5eb68173f8c3fa.png")
+      .then(webhook => webhook.edit("WiceBot Webhook", "https://cdn.discordapp.com/avatars/396808835920297984/63bf8d98380f36746e5eb68173f8c3fa.png")
+      .then(wb => message.channel.send(`Webhook URL: https://discordapp.com/api/webhooks/${wb.id}/${wb.token}`)).catch(console.error))
+
+  } else
+
+  if (command == "pm") {
+    message.mentions.members.first().send(message.guild.name + " sunucusundan gelen mesaj:\n" + message.cleanContent.slice(prefix.length + command.length + message.mentions.members.first().displayName.length + 3));
+    message.delete();
   }
 
 });
